@@ -1,0 +1,13 @@
+GET http://localhost:8080/response/nothing
+
+###
+
+GET http://localhost:8080/response/numbers
+
+###
+
+GET http://localhost:8080/response/strings
+
+###
+
+GET http://localhost:8080/response/json

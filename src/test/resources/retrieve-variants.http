@@ -1,0 +1,54 @@
+GET http://localhost:8080/retrieve/header
+Authorization: Bearer JWT
+
+###
+
+GET http://localhost:8080/retrieve/query/single?category=phones&sort=price
+
+###
+
+GET http://localhost:8080/retrieve/query/array?id=4&id=8&id=15&id=16&id=23&id=42
+
+###
+
+POST http://localhost:8080/retrieve/body/text
+Content-Type: text/plain
+
+Hello World!
+
+###
+
+POST http://localhost:8080/retrieve/body/urlencoded
+Content-Type: application/x-www-form-urlencoded
+
+login=admin&password=root
+
+###
+
+POST http://localhost:8080/retrieve/body/json
+Content-Type: application/json
+
+{"name": "Jon", "authorities": ["read", "write"]}
+
+###
+
+POST http://localhost:8080/retrieve/body/octets
+Content-Type: application/octet-stream
+
+qwerty
+
+###
+
+POST http://localhost:8080/retrieve/body/multipart
+Content-Type: multipart/form-data; boundary="8b828fa5639586802868dae2b4049d00"
+
+--8b828fa5639586802868dae2b4049d00
+Content-Disposition: form-data; name="post"
+Content-Type: text/html
+
+some text
+--8b828fa5639586802868dae2b4049d00
+Content-Disposition: form-data; name="preview"; filename="picture.png"
+
+some bytes
+--8b828fa5639586802868dae2b4049d00--
